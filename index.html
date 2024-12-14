@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&display=swap"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300;400;700&family=Srisakdi:wght@400;700&display=swap"rel="stylesheet">
+    <title>Mwanzo Mpya</title>
+</head>
+<style>
+    *{
+        font-family: "Roboto", sans-serif;
+    }
+    body{
+        background-color: #F4E8C1;
+    }
+    .text-custom{
+        color: #F4E8C1 !important;
+    }
+    .text-maroon{
+        color: #800000 !important;
+    }
+    .bg-maroon{
+        background-color: #800000 !important;
+    }
+    .bg-custom{
+        background-color: #F4E8C1 !important;
+    }
+    .hero{
+        font-family: "Rowdies", sans-serif;
+    }
+    .logo{
+        font-family: "Srisakdi", system-ui;
+        font-weight: 700;
+        font-size: 36px;
+    }
+    .mt-responsive{
+        margin-top: 150px;
+    }
+    .fade-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%; /* Adjust this value for the fade height */
+        background: linear-gradient(to top, #F4E8C1 0%, rgba(255, 255, 255, 0) 100%);
+        pointer-events: none; /* Ensures the overlay doesn't interfere with interactions */
+    }
+    .fade-overlay-carousel {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%; /* Adjust this value for the fade height */
+        background: linear-gradient(to top, #F4E8C1 0%, rgba(255, 255, 255, 0) 100%);
+        pointer-events: none; /* Ensures the overlay doesn't interfere with interactions */
+    }
+    @media (max-width: 800px) {
+        .mobile-view{
+            display: none !important;
+        }
+        .mt-responsive{
+            margin-top: 90px;
+        }
+    }
+</style>
+<nav>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #800000;">
+        <div class="container-fluid d-flex justify-content-between px-5">
+            <div>
+                <a class="navbar-brand text-custom logo" href="#">Mwanzo Mpya</a>
+            </div>
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-custom"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse  justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link text-custom active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contactus">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex gap-4 mobile-view">
+                <a href="https://www.tiktok.com/@sgkiprono?_t=8sBVypmLiOD&_r=1" target="_blank" class="text-custom"><i class="bi bi-tiktok" style="font-size: 24px;"></i></a>
+                <a href="https://x.com/sg_kiprono1?t=W6EqT758YGG_K1t-WBMZjw&s=09" target="_blank" class="text-custom"><i class="bi bi-twitter" style="font-size: 24px;"></i></a>
+                <a href="https://www.facebook.com/@KipronoSg/?mibextid=ZbWKwL" target="_blank" class="text-custom"><i class="bi bi-facebook" style="font-size: 24px;"></i></a>
+                <a href="https://www.instagram.com/sg_kiprono/profilecard/?igsh=MW1qbDZxZm04enpvaQ==" target="_blank" class="text-custom"><i class="bi bi-instagram" style="font-size: 24px;"></i></a>
+            </div>
+        </div>
+    </nav>
+</nav>
+<body>
+    <section class="px-5 mt-responsive">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h5 class="fs-sm-6">Together for a Better Tommorrow</h5>
+                <h1 class="fw-bold hero">Leadership You</h1>
+                <h1 class="text-maroon hero">Can Trust</h1>
+                <p class="mt-md-5 mt-3" style="text-align: justify;">
+                    SG has always been driven by a desire to make a difference. Growing up in [hometown], Kerry learned the
+                    importance of community, integrity, and service. These values have guided every step of their journey, from [specific
+                    milestones] to becoming a trusted voice for the people
+                </p>
+                <button class="btn btn-lg text-white bg-maroon rounded-pill w-50 mt-md-5 mt-2">Learn More</button>
+                <div class="d-flex gap-4 mt-4">
+                    <a href="https://www.tiktok.com/@sgkiprono?_t=8sBVypmLiOD&_r=1" class="text-maroon"><i class="bi bi-tiktok" style="font-size: 24px;"></i></a>
+                    <a href="https://x.com/sg_kiprono1?t=W6EqT758YGG_K1t-WBMZjw&s=09" class="text-maroon"><i class="bi bi-twitter" style="font-size: 24px;"></i></a>
+                    <a href="https://www.facebook.com/@KipronoSg/?mibextid=ZbWKwL" class="text-maroon"><i class="bi bi-facebook" style="font-size: 24px;"></i></a>
+                    <a href="https://www.instagram.com/sg_kiprono/profilecard/?igsh=MW1qbDZxZm04enpvaQ==" class="text-maroon"><i class="bi bi-instagram" style="font-size: 24px;"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 ">
+                <div class="image-holder" style="width: 100%; height: 500px;position: relative;overflow:visible;">
+                    <img src="./img/sgnewpicNOBG.png" alt="heroImg" width="100%" height="100%" style="object-fit: contain; transform: scale(1.2);">
+                    <div class="fade-overlay"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h6>Review of what we stand for</h6>
+                <div class="iframe-holder" style="height: 50%;width: 100%">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nfhGNZHCUB0" title="Know You Will" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <p>SG is committed to building a future where every citizen has the tools to succeed. Their priorities include:</p>
+                <ul>
+                    <li>Expanding access to quality education</li>
+                    <li>Strengthening healthcare systems</li>
+                    <li>Promoting economic growth through job creation and innovation</li>
+                    <li>Ensuring safety and security for every community</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="aboutus" class="px-5 py-5 mt-responsive bg-black">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h1 class="text-maroon hero">About</h1>
+                <h1 class="text-custom hero ms-2">Us</h1>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <h5 class="fw-700 text-custom">A Leader with a Purpose</h5>
+                <p class="text-custom mt-3"> Kerry Tops has always been driven by a desire to make a difference. Growing up in [hometown], Kerry learned the
+                    importance of community, integrity, and service. These values have guided every step of their journey, from
+                    [specific
+                    milestones] to becoming a trusted voice for the people
+                </p>
+                <h5 class="fw-700 text-custom mt-md-5 mt-2">A Vision for the Future</h5>
+                <p class="text-custom mt-3">SG is committed to building a future where every citizen has the tools to succeed. Their priorities include:</p>
+                <ul class="text-custom">
+                    <li>Expanding access to quality education</li>
+                    <li>Strengthening healthcare systems</li>
+                    <li>Promoting economic growth through job creation and innovation</li>
+                    <li>Ensuring safety and security for every community</li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12 d-flex align-items-center justify-content-center mobile-view" style="position: relative;">
+                <div class="image-holders " style="width: 60%; height: 270px;position: absolute;top: 0;left: 0;">
+                    <img src="./img/TESTPIC.jpg" alt="pic" width="100%" height="100%" style="object-fit: cover;">
+                </div>
+                <div class="image-holders " style="width: 60%; height: 270px;position: absolute;bottom: 0;right: 0;">
+                    <img src="./img/TESTPIC.jpg" alt="pic" width="100%" height="100%" style="object-fit: cover;">
+                </div>
+                <div class="bg-custom text-black d-flex align-items-center justify-content-center text-center text-maroon" style="width: 30%;position: absolute;height: 20%;">
+                    <span style="font-size: 26px;font-weight: 700;line-height: 34.19px;">Together <br> We Can</span>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6 col-sm-12">
+                <div class="row mt-md-5 mt-2">
+                    <div class="col-md-4 col-sm-12 d-flex justify-content-start mt-1">
+                        <div class="bg-custom text-black h-100 d-flex align-items-center justify-content-center text-center"
+                            style="width: 100%;">
+                            <span style="font-size: 26px;font-weight: 700;line-height: 34.19px;">20+ <br> Outreach <br> Programs</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 d-flex justify-content-start mt-1">
+                        <div class="bg-custom text-black h-100 d-flex align-items-center justify-content-center text-center text-maroon"
+                            style="width: 100%;">
+                            <span style="font-size: 26px;font-weight: 700;line-height: 34.19px;">10+ <br> Community <br> Help</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 d-flex justify-content-start mt-1">
+                        <div class="bg-custom text-black h-100 d-flex align-items-center justify-content-center text-center text-maroon"
+                            style="width: 100%;">
+                            <span style="font-size: 26px;font-weight: 700;line-height: 34.19px;">20+ <br> Feeding <br> Programs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="mt-5">
+                    <h5 class="fw-700 text-custom">Join the Movement</h5>
+                    <p class="text-custom mt-3"> Kerry Tops has always been driven by a desire to make a difference. Growing up in
+                        [hometown], Kerry learned the
+                        importance of community, integrity, and service. These values have guided every step of their journey, from
+                        [specific
+                        milestones] to becoming a trusted voice for the people
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="achievements" class="px-5 mt-responsive">
+        <div class="row" style="margin-top: -50px;">
+            <div class="col-12 text-center">
+                <h1 class="text-maroon hero">Achievements</h1>
+                <p class="mt-3">Kerry Tops' achievements reflect a commitment to community, progress, and solutions that improve lives every day</p>
+            </div>
+            <div class="col-12 text-center mt-5">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <div class="image-holder w-100" style="height: 600px;">
+                                <img src="./img/car1.jpg" class="d-block w-100" alt="..." width="100%" height="100%" style="object-fit: contain;">
+                            </div>
+                            <div class="fade-overlay-carousel"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Economic Growth</h5>
+                                <p>Increased school funding by 25%, upgrading facilities and providing scholarships to 2,000 students annually.
+                                    Established mentorship programs connecting students with industry leaders.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div class="image-holder w-100" style="height: 600px;">
+                                <img src="./img/car2.jpg" class="d-block w-100" alt="..." width="100%" height="100%" style="object-fit: contain;">
+                            </div>
+                            <div class="fade-overlay-carousel"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Empowering Education</h5>
+                                <p>Increased school funding by 25%, upgrading facilities and providing scholarships to 2,000 students annually.
+                                    Established mentorship programs connecting students with industry leaders.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="image-holder w-100" style="height: 600px;">
+                                <img src="./img/car3.jpg" class="d-block w-100" alt="..." width="100%" height="100%" style="object-fit: contain;">
+                            </div>
+                            <div class="fade-overlay-carousel"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Sustainable Environment</h5>
+                                <p>Increased school funding by 25%, upgrading facilities and providing scholarships to 2,000 students annually.
+                                    Established mentorship programs connecting students with industry leaders.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon text-maroon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon text-maroon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contactus" class="px-5 py-5 mt-responsive bg-black">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h1 class="text-maroon hero">Contact</h1>
+                <h1 class="text-custom hero ms-2">Us</h1>
+            </div>
+            <div class="col-md-6 col-sm-12 mt-md-5 mt-3">
+                <div class="rounded-4 bg-maroon p-5">
+                    <h4 class="text-white hero">Get in Touch</h4>
+                    <div class="d-grid gap-3 mt-3">
+                        <input class="form-control text-maroon" type="text" placeholder="Name">
+                        <input class="form-control text-maroon" type="text" placeholder="Email">
+                        <input class="form-control text-maroon" type="text" placeholder="Phone (Optional)">
+                        <input class="form-control text-maroon" type="text" placeholder="Subject">
+                        <textarea class="form-control" rows="4" placeholder="Your Message" id="floatingTextarea"></textarea>
+                        <button class="btn btn-dark">Send Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 mt-md-5 mt-3">
+                <h4 class="text-white text-center">Have questions, suggestions, or need assistance? We're here to help. Reach out today.</h4>
+                <div class="d-flex align-items-center justify-content-around mx-4">
+                    <div class="telephone text-center">
+                        <i class="bi bi-telephone-fill text-white" style="font-size: 64px;"></i> 
+                        <h4 class="text-white">Phone Number</h4>
+                        <p class="text-white">4567</p>
+                    </div>
+                    <div class="email text-center">
+                        <i class="bi bi-envelope-fill text-white" style="font-size: 64px;"></i>
+                        <h4 class="text-white">Email Address</h4>
+                        <p class="text-white">info@yourdomain.com</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-around mx-4">
+                    <div class="whatsapp text-center">
+                        <i class="bi bi-whatsapp text-white" style="font-size: 64px"></i>
+                        <h4 class="text-white">WhatsApp</h4>
+                        <p class="text-white">+1234567890</p>
+                    </div>
+                    <div class="office_hours text-center">
+                        <i class="bi bi-building text-white" style="font-size: 64px;"></i>
+                        <h4 class="text-white">Office Hours</h4>
+                        <p class="text-white">Monday - Friday, <br> 9:00 AM - 5:PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-maroon text-white text-center p-4">
+        © Copyright, 2024. All rights reserved. Desgin by Awino. Developed by Joab
+    </footer>
+</body>
+</html>
